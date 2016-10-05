@@ -1,0 +1,17 @@
+{% extends "template.html" %}
+
+{% block body %}
+    <h1>Bienvenido a WordPlease</h1>
+    <p> Como Medium pero a lo barato</p>
+
+
+    {% if posts_list|length > 0 %}
+    {% include "posts/includes/posts_logic.html" %}
+
+
+
+    {% else %}
+    <p>¡Únete a nosotros y crea un post!</p>
+    {% endif %}
+
+{% endblock %}
