@@ -1,9 +1,8 @@
 {% extends "template.html" %}
-{% block title %} Bienvenido a Wordplease {% endblock %}
+{% block title %} Listado de Blogs {% endblock %}
 
 {% block body %}
-    <h3>Listado de blogs</h3>
-
+    <h1> Listado de Blogs</h1>
     {% for blog in blogs_list %}
     <li>
         <a href="/blogs/{{blog.username}}">{{blog.username}}</a>

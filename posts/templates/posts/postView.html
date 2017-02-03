@@ -3,8 +3,16 @@
 
 {% block body %}
 
-
-    {% include "posts/includes/posts_logic.html" %}
+     <h4 style="color: #ee6e73; margin-top:40px">{{ post.title }}</h4>
+       <h5> {{ post.owner }}</h5>
+    <div class="row">
+        <div class="col s12 m12 l12">
+            <img src="{{ post.url }}" alt="{{ post.title }}" height="300">
+        </div>
+    </div>
+    <p>{{post.introduction}}</p>
+    <p>{{ post.description }}</p>
+    <h5 class="center-align" style="color: #ee6e73">Fecha de subida: {{ post.publication_date }}</h5>
 
 
 {% endblock %}

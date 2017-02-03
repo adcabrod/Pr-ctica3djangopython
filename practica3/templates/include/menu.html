@@ -1,0 +1,29 @@
+<nav class="navbar navbar-deafult navbar-fixed-top navbar-inverse">
+    <div class="container" id="navbar-1">
+        <ul class="nav nav-pills" style="margin-top: 5px; float: right;" >
+			<li role="presentation" class="active">
+				<a href="/">Home</a>
+			</li>
+			<li role="presentation" class="active">
+				<a href="{% url 'blog_view' %}">Blogs</a>
+			</li>
+
+		{% if user.is_authenticated %}
+			<li role="presentation" class="active">
+				<a href="{% url 'creation_view' %}">Crear Post</a>
+			</li>
+			<li role="presentation" class="active">
+				<a href="/accounts/logout">Logout</a>
+			</li>
+			{% else %}
+			<li role="presentation" class="active">
+				<a href="/accounts/login">Login</a>
+            </li>
+            <li role="presentation" class="active">
+				<a href="/accounts/signup">Sign up</a>
+			</li>
+		{% endif %}
+		</ul>
+    </div>
+</nav>
+<hr>

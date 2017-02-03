@@ -1,10 +1,15 @@
 {% extends "template.html" %}
-{% block title %} Bienvenido a Wordplease {% endblock %}
 
 {% block body %}
-<h2>{{username}}</h2>
 
-{% include 'posts/includes/posts_logic.html' %}
 
+    {% if posts_list|length > 0 %}
+    {% include "posts/includes/posts_logic.html" %}
+
+
+
+    {% else %}
+    <p>Este usuario no tiene posts publidados</p>
+    {% endif %}
 
 {% endblock %}

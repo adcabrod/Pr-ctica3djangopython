@@ -1,9 +1,10 @@
 {% extends "template.html" %}
 
 {% block body %}
-    <h1>Bienvenido a WordPlease</h1>
-    <p> Como Medium pero a lo barato</p>
-
+    <div class="">
+        <h1>Bienvenido a WordPlease</h1>
+        <h2> Como Medium pero a lo barato</h2>
+    </div>
 
     {% if posts_list|length > 0 %}
     {% include "posts/includes/posts_logic.html" %}

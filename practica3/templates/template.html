@@ -1,15 +1,38 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <title>{% block title %}{% endblock %}</title>
+    <link  rel="stylesheet"  type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/cssstyle.css' %}">
+    <link   rel="stylesheet" type="text/css" href="{% static 'css/grid.css' %}">
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
 
 </head>
 <body>
-    {% include "posts/includes/menu.html" %}
+    {% include "include/menu.html" %}
     {% block body %}{% endblock %}
 
 </body>
 <hr>
-<p> &copy, Todos los derechos reservados</p>
+<footer class="footercolor">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-6">
+					<p class="footertext"> Adrián Cabrera - TagoEstudio</p>
+				</div>
+				<div class="col-xs-6">
+					<ul class="list-inline text-right">
+					<li>
+					<a  class="up footertext" href="">Up</a>
+					</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
 </html>
